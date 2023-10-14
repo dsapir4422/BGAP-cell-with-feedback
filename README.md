@@ -22,6 +22,8 @@ We will design the circuit below -
 * We will use an ideal VCCS (opamp) to provide negative feedback for the circuit, this in order for both currents on CTAT and PTAT branches to be equal.
 * Finaly, we will add an additional branch with R2 to trim $V_{BG}$ voltage so that $V_{BG} = V_{CTAT} + \alpha*V_{PTAT} = V_{BE3} + (kT/q)*TC$,   where $TC = (R2/R1)ln(N)$
 * Current calculated as $I_0 = (kT/q)*(1/R_1)*ln(N)$ and will be determined from simulations
+
+
   ****
 
   
@@ -34,7 +36,7 @@ At first we will choose R1 to target for $I_0=10[uA]$ -> based on simulations $R
 We will also simulate CTAT and PTAT voltage behavior over temperatures - 
 ![image](https://github.com/dsapir4422/BGAP-cell-with-feedback/assets/87266625/d04fb36c-a9bd-4d2c-9846-57ea3f4bf4c5)
 
-Now, in order to determine R2 value, we will simulate the ratio of CTAT/PTAT slope -  $\delta V_{BG}/ \delta Temp = R_2/R_1$ - 
+Now, in order to determine R2 value, we will simulate the ratio of CTAT/PTAT slope -  $\delta V_{BE}/ \delta \Delta V_{BE} = R_2/R_1$ - 
 <img width="800" height="400" alt="image" src="https://github.com/dsapir4422/BGAP-cell-with-feedback/assets/87266625/8e9987fd-eb94-4bca-8233-b12f3047d0b5">
 
 => $R_2 = R_1 * 10.8 = 58.3[Kohm]$ => $TC = (R2/R1)ln(8) = 22.45$.  from simulation - $V_{BE3} = 583[mV]$, which gives us a BG value of  $V_{BG}= V_{BE3} + (kT/q)*TC = 1.17[V]$
@@ -54,6 +56,7 @@ Notes -
 * current copying on branches is a bit mismatch, this can be avoided by lowering channel length modulation (increasing L or adding a cascode stage)
 
 **Corners analysis**
+
 VAA supply change by +/-10% gives 5mV error - 
 
 ![image](https://github.com/dsapir4422/BGAP-cell-with-feedback/assets/87266625/d38eaaeb-2098-48f7-ac3c-7010ee03dada)
