@@ -49,7 +49,8 @@ We see that VBG has CTAT behavoir (zoom in image) and VBG change by 6mV, so we w
 ![image](https://github.com/dsapir4422/BGAP-cell-with-feedback/assets/87266625/304d94ff-172b-4d26-9ec2-322fd44a1a5e)
 
 Final circuit - 
-![image](https://github.com/dsapir4422/BGAP-cell-with-feedback/assets/87266625/a5478f09-95f3-4d2c-a1e6-50d4bab12cd7)
+
+<img width="500" height="500" alt="image" align=center src="https://github.com/dsapir4422/BGAP-cell-with-feedback/assets/87266625/a5478f09-95f3-4d2c-a1e6-50d4bab12cd7">
 
 Notes -
 * Curvature behavoir is due to 2nd order effects, this can be also compensated by a dedicated curvature compensation circuits
